@@ -8,7 +8,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 
 function PersonalExposureScore() {
   return (
-    <Card>
+    <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
       <CardHeader>
         <CardTitle className="font-headline flex items-center gap-2">
           <ShieldCheck className="text-primary" />
@@ -68,7 +68,7 @@ export default function HeatMapsPage() {
 
       <div className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
-          <Card className="glass-card">
+          <Card className="glass-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
             <CardContent className="p-4">
               <Tabs defaultValue="aqi" className="w-full">
                 <TabsList className="grid w-full grid-cols-3">

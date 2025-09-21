@@ -29,7 +29,7 @@ export default function HighlightedDestinations() {
             const destImage = PlaceHolderImages.find(img => img.id === dest.image);
             return (
               <Link href="/destinations" key={dest.id} className="block">
-                <Card className="overflow-hidden group h-full">
+                <Card className="overflow-hidden group h-full transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
                   <CardHeader className="p-0 relative h-64">
                      {destImage && (
                       <Image

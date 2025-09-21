@@ -35,7 +35,7 @@ export default function DestinationsPage() {
         </p>
       </div>
 
-      <Card className="mb-12 glass-card">
+      <Card className="mb-12 glass-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
         <CardContent className="p-4">
           <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
             {mapImage && (
@@ -71,7 +71,7 @@ export default function DestinationsPage() {
         {filteredDestinations.map(dest => {
           const destImage = PlaceHolderImages.find(img => img.id === dest.image);
           return (
-            <Card key={dest.id} className="overflow-hidden group flex flex-col">
+            <Card key={dest.id} className="overflow-hidden group flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
               <CardHeader className="p-0 relative h-56">
                 {destImage && (
                   <Image

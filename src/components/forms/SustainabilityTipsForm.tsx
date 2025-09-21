@@ -41,7 +41,7 @@ export default function SustainabilityTipsForm() {
 
   return (
     <div className="space-y-8">
-      <Card>
+      <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
         <CardContent className="p-6">
           <form action={formAction} className="space-y-6">
             <div className="space-y-2">
@@ -85,7 +85,7 @@ export default function SustainabilityTipsForm() {
       )}
 
       {state.formState === 'success' && state.data && (
-        <Card>
+        <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
           <CardHeader>
             <CardTitle className="font-headline">Your Eco-Travel Tips</CardTitle>
           </CardHeader>

@@ -41,7 +41,7 @@ export default function Testimonials() {
                   className="md:basis-1/2 lg:basis-1/3"
                 >
                   <div className="p-1">
-                    <Card className="h-full">
+                    <Card className="h-full transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
                       <CardContent className="flex flex-col items-center text-center p-8">
                         <Avatar className="w-20 h-20 mb-4">
                           {avatarImage && (

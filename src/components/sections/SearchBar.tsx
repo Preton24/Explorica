@@ -17,7 +17,7 @@ export default function SearchBar() {
   return (
     <section className="py-12 bg-transparent -mt-20 relative z-10">
       <div className="container">
-        <Card className="glass-card shadow-2xl">
+        <Card className="glass-card shadow-2xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
           <CardContent className="p-6">
             <form className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-10 gap-4 items-center">
               <div className="relative md:col-span-2 lg:col-span-3">

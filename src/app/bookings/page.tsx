@@ -9,7 +9,7 @@ function TicketCard() {
   const qrImage = PlaceHolderImages.find(img => img.id === 'ticket-qr');
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
       <CardHeader className="bg-primary/10 p-4">
         <CardTitle className="font-headline text-primary">Hundru Falls Adventure</CardTitle>
         <CardDescription>Guided Tour</CardDescription>
@@ -84,7 +84,7 @@ export default function BookingsPage() {
         </TabsContent>
         <TabsContent value="past">
           <div className="mt-8 grid gap-6">
-            <Card>
+            <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
               <CardHeader>
                 <CardTitle>Deoghar Spiritual Journey</CardTitle>
                 <CardDescription>Completed on Oct 15, 2023</CardDescription>
@@ -96,7 +96,7 @@ export default function BookingsPage() {
                 <Button variant="outline">View Details</Button>
               </CardFooter>
             </Card>
-             <Card>
+             <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
               <CardHeader>
                 <CardTitle>Patratu Valley Drive</CardTitle>
                 <CardDescription>Completed on Jul 02, 2023</CardDescription>
