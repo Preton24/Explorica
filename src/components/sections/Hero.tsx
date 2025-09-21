@@ -9,17 +9,8 @@ export default function Hero() {
 
   return (
     <section className="relative h-[80vh] w-full">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          data-ai-hint={heroImage.imageHint}
-          fill
-          className="object-cover"
-          priority
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/80 via-purple-500/80 to-yellow-500/80"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
         
         <div className="absolute top-8 right-8">
@@ -37,7 +28,7 @@ export default function Hero() {
           Your unforgettable journey begins here.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" className="rounded-full h-12 text-base font-semibold">
+          <Button asChild size="lg" className="rounded-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href="/smart-planner">
               Plan My Trip
               <MoveRight className="ml-2 h-5 w-5" />
