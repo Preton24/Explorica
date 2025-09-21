@@ -66,6 +66,36 @@
       "description": "Placeholder QR code for tickets",
       "imageUrl": "https://picsum.photos/seed/qrcode/150/150",
       "imageHint": "qr code"
+    },
+    {
+      "id": "guide-1",
+      "description": "Local guide 1",
+      "imageUrl": "https://picsum.photos/seed/guide1/150/150",
+      "imageHint": "guide portrait"
+    },
+    {
+      "id": "guide-2",
+      "description": "Local guide 2",
+      "imageUrl": "https://picsum.photos/seed/guide2/150/150",
+      "imageHint": "guide smiling"
+    },
+    {
+      "id": "handicraft-1",
+      "description": "Handicraft product 1",
+      "imageUrl": "https://picsum.photos/seed/handicraft1/400/300",
+      "imageHint": "metal art"
+    },
+    {
+      "id": "handicraft-2",
+      "description": "Handicraft product 2",
+      "imageUrl": "https://picsum.photos/seed/handicraft2/400/300",
+      "imageHint": "tribal painting"
+    },
+    {
+      "id": "handicraft-3",
+      "description": "Handicraft product 3",
+      "imageUrl": "https://picsum.photos/seed/handicraft3/400/300",
+      "imageHint": "bamboo craft"
     }
   ]
 }
