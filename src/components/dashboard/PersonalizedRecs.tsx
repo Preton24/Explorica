@@ -33,7 +33,7 @@ export default function PersonalizedRecs() {
   }, []);
 
   return (
-    <Card>
+    <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
       <CardHeader>
         <CardTitle className="font-headline flex items-center gap-2">
           <Sparkles className="text-primary" />

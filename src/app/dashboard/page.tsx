@@ -11,7 +11,7 @@ import PersonalizedRecs from '@/components/dashboard/PersonalizedRecs';
 function ProfileCard() {
   const avatar = PlaceHolderImages.find(img => img.id === 'avatar-1');
   return (
-    <Card>
+    <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
       <CardHeader className="flex flex-row items-center justify-between">
         <div className="flex items-center gap-4">
           <Avatar className="h-20 w-20">
@@ -45,7 +45,7 @@ function ProfileCard() {
 
 function UpcomingTrips() {
   return (
-    <Card>
+    <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
       <CardHeader>
         <CardTitle className="font-headline">Upcoming Trips</CardTitle>
       </CardHeader>
@@ -71,7 +71,7 @@ function UpcomingTrips() {
 
 function PersonalExposureScore() {
   return (
-    <Card>
+    <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
       <CardHeader>
         <CardTitle className="font-headline flex items-center gap-2">
           <ShieldCheck className="text-primary" />
@@ -98,7 +98,7 @@ function PersonalExposureScore() {
 
 function Notifications() {
    return (
-    <Card>
+    <Card className="transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
       <CardHeader>
         <CardTitle className="font-headline">Notifications</CardTitle>
       </CardHeader>
