@@ -9,8 +9,17 @@ export default function Hero() {
 
   return (
     <section className="relative h-[80vh] w-full overflow-hidden">
-      <div className="animated-gradient absolute inset-0"></div>
-      <div className="absolute inset-0 bg-black/40"></div>
+      {heroImage && (
+        <Image
+          src={heroImage.imageUrl}
+          alt="Hundru Falls in Jharkhand"
+          data-ai-hint="waterfall landscape"
+          fill
+          className="object-cover"
+          priority
+        />
+      )}
+      <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
         
         <div className="absolute top-8 right-8">
@@ -23,7 +32,7 @@ export default function Hero() {
         <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-md">
           Explore the Heart of India
         </h1>
-        <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/90 drop-shadow-md">
+        <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90 drop-shadow-md">
           Discover Jharkhand's hidden gems, from breathtaking waterfalls to ancient temples.
           Your unforgettable journey begins here.
         </p>
