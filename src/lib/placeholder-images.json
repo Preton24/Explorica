@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-1",
-      "description": "Hero banner for Explorica showing a dark forest",
-      "imageUrl": "https://picsum.photos/seed/darkforest/1600/900",
-      "imageHint": "dark forest"
+      "description": "Hero banner for Explorica showing a lush green forest",
+      "imageUrl": "https://picsum.photos/seed/greenforest/1600/900",
+      "imageHint": "green forest"
     },
     {
       "id": "dest-netarhat",
