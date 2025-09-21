@@ -19,9 +19,9 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
   const destImage = PlaceHolderImages.find(img => img.id === destination.image);
 
   const activities = [
-    { title: 'Guided Waterfall Hike', icon: Camera, price: 'from ₹2000' },
-    { title: 'Jungle Safari', icon: Zap, price: 'from ₹4000' },
-    { title: 'Local Village Tour', icon: Bike, price: 'from ₹1200' },
+    { title: 'Guided Waterfall Hike', icon: Camera, price: '₹2,000 onwards' },
+    { title: 'Jungle Safari', icon: Zap, price: '₹4,000 onwards' },
+    { title: 'Local Village Tour', icon: Bike, price: '₹1,200 onwards' },
   ];
 
   const guides = [
