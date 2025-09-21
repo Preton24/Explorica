@@ -35,7 +35,7 @@ export type GetPersonalizedSustainabilityTipsInput = z.infer<
 const GetPersonalizedSustainabilityTipsOutputSchema = z.object({
   sustainabilityTips: z
     .string()
-    .describe('A list of personalized sustainability tips for the trip.'),
+    .describe('A list of personalized sustainability tips for the trip in Markdown format.'),
 });
 export type GetPersonalizedSustainabilityTipsOutput = z.infer<
   typeof GetPersonalizedSustainabilityTipsOutputSchema
@@ -53,11 +53,14 @@ const prompt = ai.definePrompt({
   output: {schema: GetPersonalizedSustainabilityTipsOutputSchema},
   prompt: `You are a sustainability expert providing personalized tips for eco-friendly travel.
 
-  Provide a list of specific, actionable sustainability tips for a trip to {{destination}} lasting {{duration}} days, considering the traveler's interests in {{interests}}, travel score of {{travelScore}} and past bookings: {{pastBookings}}.
+  Provide a concise, scannable list of actionable sustainability tips for a trip to {{destination}} lasting {{duration}} days, considering the traveler's interests in {{interests}}.
+  
+  The user has a travel score of {{travelScore}} and past bookings including: {{pastBookings}}.
+  
+  Keep the tips short and to the point. Format the output as a Markdown document. Use headings for categories (e.g., ### Transportation) and bullet points for the tips.
 
   If the traveler has a transportation preference of {{transportationPreference}}, suggest eco-friendly alternatives.
-  If the traveler has an accommodation preference of {{accommodationPreference}}, suggest sustainable options like local homestays over chain hotels to boost community income.
-  Focus on tips that help minimize environmental impact and support the local community.
+  If the traveler has an accommodation preference of {{accommodationPreference}}, suggest sustainable options like local homestays.
   `,
 });
 

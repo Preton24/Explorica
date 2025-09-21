@@ -7,6 +7,7 @@ import { Loader2, Sparkles } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { GetPersonalizedSustainabilityTipsOutput } from '@/ai/flows/get-personalized-sustainability-tips';
 import { getPersonalizedSustainabilityTips } from '@/ai/flows/get-personalized-sustainability-tips';
+import ReactMarkdown from 'react-markdown';
 
 export default function PersonalizedSustainabilityTips() {
     const [tips, setTips] = useState<GetPersonalizedSustainabilityTipsOutput | null>(null);
@@ -62,12 +63,11 @@ export default function PersonalizedSustainabilityTips() {
                     </Alert>
                 )}
                 {tips && (
-                    <div className="prose prose-sm md:prose-base max-w-none prose-p:text-muted-foreground">
-                        <pre className="whitespace-pre-wrap font-body text-sm bg-muted/50 p-4 rounded-md">{tips.sustainabilityTips}</pre>
+                    <div className="prose prose-sm md:prose-base max-w-none dark:prose-invert prose-p:text-muted-foreground prose-headings:text-foreground">
+                        <ReactMarkdown>{tips.sustainabilityTips}</ReactMarkdown>
                     </div>
                 )}
             </CardContent>
         </Card>
     );
 }
-
