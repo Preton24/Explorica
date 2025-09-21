@@ -13,7 +13,7 @@ import {z} from 'genkit';
 
 const GenerateTripItineraryInputSchema = z.object({
   duration: z.number().describe('The duration of the trip in days.'),
-  budget: z.string().describe('The budget for the trip (e.g., "10000 INR").'),
+  budget: z.string().describe('The budget for the trip (e.g., "₹10000").'),
   interests: z.string().describe('The interests of the traveler (e.g., "eco-tourism, cultural sites").'),
 });
 export type GenerateTripItineraryInput = z.infer<typeof GenerateTripItineraryInputSchema>;

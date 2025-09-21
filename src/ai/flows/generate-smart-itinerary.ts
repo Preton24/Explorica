@@ -14,7 +14,7 @@ import {z} from 'genkit';
 const GenerateSmartItineraryInputSchema = z.object({
   destination: z.string().describe('The destination for the trip (e.g., \"Ranchi\").'),
   duration: z.number().describe('The duration of the trip in days.'),
-  budget: z.string().describe('The budget for the trip (e.g., \"40000 INR\").'),
+  budget: z.string().describe('The budget for the trip (e.g., \"₹40000\").'),
   interests: z.string().describe('The interests of the traveler (e.g., \"eco-tourism, cultural sites\").'),
   transportationPreference: z.string().optional().describe('The preferred mode of transportation (e.g., train, bus, flight).'),
   accommodationPreference: z.string().optional().describe('The preferred type of accommodation (e.g., homestay, hotel).'),
