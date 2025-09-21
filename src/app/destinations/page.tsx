@@ -13,6 +13,7 @@ import { destinations } from '@/lib/constants';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Star, MapPin, View } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 type Category = 'All' | 'Eco-tourism' | 'Cultural' | 'Adventure' | 'Spiritual';
 
@@ -97,8 +98,8 @@ export default function DestinationsPage() {
                     <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                     <span className="font-bold text-sm">{dest.rating}</span>
                   </div>
-                  <Button variant="secondary" size="sm">
-                    Explore
+                  <Button asChild variant="secondary" size="sm">
+                    <Link href={`/destinations/${dest.slug}`}>Explore</Link>
                   </Button>
                 </div>
               </CardContent>
