@@ -1,11 +1,21 @@
+
 'use client';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
-import { AreaChart, ShieldCheck, Thermometer, Wind } from 'lucide-react';
+import { AreaChart, ShieldCheck, Thermometer, Wind, Loader2 } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import HeatMap from '@/components/maps/HeatMap';
+import dynamic from 'next/dynamic';
+
+const HeatMap = dynamic(() => import('@/components/maps/HeatMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex aspect-video mt-4 rounded-lg items-center justify-center bg-muted">
+      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    </div>
+  ),
+});
+
 
 function PersonalExposureScore() {
   return (
