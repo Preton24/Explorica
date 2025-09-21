@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
 
         <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-md">
-          Explore the Heart of India
+          Travel smart. Travel green. Travel you.
         </h1>
         <p className="mt-4 max-w-2xl text-lg md:text-xl text-white/90 drop-shadow-md">
           Discover Jharkhand's hidden gems, from breathtaking waterfalls to ancient temples.
