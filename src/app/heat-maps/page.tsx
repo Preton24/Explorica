@@ -1,21 +1,12 @@
-
 'use client';
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
-import { AreaChart, ShieldCheck, Thermometer, Wind, Loader2 } from 'lucide-react';
+import { AreaChart, ShieldCheck, Thermometer, Wind, Loader2, Landmark } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import dynamic from 'next/dynamic';
-
-const HeatMap = dynamic(() => import('@/components/maps/HeatMap'), {
-  ssr: false,
-  loading: () => (
-    <div className="flex aspect-video mt-4 rounded-lg items-center justify-center bg-muted">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
-    </div>
-  ),
-});
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 
 function PersonalExposureScore() {
@@ -69,6 +60,7 @@ type MapType = 'aqi' | 'weather' | 'safety';
 
 export default function HeatMapsPage() {
   const [mapType, setMapType] = useState<MapType>('aqi');
+  const mapImage = PlaceHolderImages.find(img => img.id === 'map-placeholder');
 
   return (
     <div className="container py-12">
@@ -90,8 +82,16 @@ export default function HeatMapsPage() {
                   <TabsTrigger value="weather">Weather</TabsTrigger>
                   <TabsTrigger value="safety">Safety Index</TabsTrigger>
                 </TabsList>
+                 <TabsContent value="aqi" className="mt-4">
+                  {mapImage && <Image src={mapImage.imageUrl} alt="AQI Map" width={1200} height={800} className="rounded-lg aspect-video object-cover" />}
+                </TabsContent>
+                <TabsContent value="weather" className="mt-4">
+                  {mapImage && <Image src={mapImage.imageUrl} alt="Weather Map" width={1200} height={800} className="rounded-lg aspect-video object-cover" />}
+                </TabsContent>
+                <TabsContent value="safety" className="mt-4">
+                 {mapImage && <Image src={mapImage.imageUrl} alt="Safety Map" width={1200} height={800} className="rounded-lg aspect-video object-cover" />}
+                </TabsContent>
               </Tabs>
-              <HeatMap mapType={mapType} />
             </CardContent>
           </Card>
         </div>
