@@ -30,6 +30,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    serverComponentsExternalPackages: ['@vis.gl/react-google-maps']
+  }
 };
 
 export default nextConfig;

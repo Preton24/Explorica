@@ -1,10 +1,11 @@
-import Image from 'next/image';
+'use client';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { AreaChart, ShieldCheck, Thermometer, Wind } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import HeatMap from '@/components/maps/HeatMap';
 
 function PersonalExposureScore() {
   return (
@@ -54,8 +55,6 @@ function PersonalExposureScore() {
 }
 
 export default function HeatMapsPage() {
-  const mapImage = PlaceHolderImages.find(img => img.id === 'map-placeholder');
-
   return (
     <div className="container py-12">
       <div className="text-center mb-12">
@@ -77,52 +76,13 @@ export default function HeatMapsPage() {
                   <TabsTrigger value="safety">Safety Index</TabsTrigger>
                 </TabsList>
                 <TabsContent value="aqi">
-                  <div className="relative aspect-video mt-4 rounded-lg overflow-hidden">
-                    {mapImage && (
-                      <Image
-                        src={mapImage.imageUrl}
-                        alt="AQI Map"
-                        data-ai-hint="air quality map"
-                        fill
-                        className="object-cover"
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                      <h2 className="text-3xl font-bold text-white font-headline">Live AQI Map</h2>
-                    </div>
-                  </div>
+                  <HeatMap mapType="aqi" />
                 </TabsContent>
                  <TabsContent value="weather">
-                  <div className="relative aspect-video mt-4 rounded-lg overflow-hidden">
-                    {mapImage && (
-                      <Image
-                        src={mapImage.imageUrl}
-                        alt="Weather Map"
-                        data-ai-hint="weather map"
-                        fill
-                        className="object-cover"
-                      />
-                    )}
-                     <div className="absolute inset-0 bg-blue-900/30 flex items-center justify-center">
-                      <h2 className="text-3xl font-bold text-white font-headline">Live Weather Map</h2>
-                    </div>
-                  </div>
+                  <HeatMap mapType="weather" />
                 </TabsContent>
                  <TabsContent value="safety">
-                  <div className="relative aspect-video mt-4 rounded-lg overflow-hidden">
-                    {mapImage && (
-                      <Image
-                        src={mapImage.imageUrl}
-                        alt="Safety Map"
-                        data-ai-hint="safety index map"
-                        fill
-                        className="object-cover"
-                      />
-                    )}
-                     <div className="absolute inset-0 bg-green-900/30 flex items-center justify-center">
-                      <h2 className="text-3xl font-bold text-white font-headline">Live Safety Index Map</h2>
-                    </div>
-                  </div>
+                  <HeatMap mapType="safety" />
                 </TabsContent>
               </Tabs>
             </CardContent>
