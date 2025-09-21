@@ -86,13 +86,13 @@ export default function HeatMapsPage() {
                   <TabsTrigger value="safety">Safety Index</TabsTrigger>
                 </TabsList>
                 <TabsContent value="aqi">
-                  <HeatMap mapType="aqi" />
+                  <HeatMap key="aqi" mapType="aqi" />
                 </TabsContent>
                  <TabsContent value="weather">
-                  <HeatMap mapType="weather" />
+                  <HeatMap key="weather" mapType="weather" />
                 </TabsContent>
                  <TabsContent value="safety">
-                  <HeatMap mapType="safety" />
+                  <HeatMap key="safety" mapType="safety" />
                 </TabsContent>
               </Tabs>
             </CardContent>
