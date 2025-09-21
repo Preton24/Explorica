@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster"
+import Chatbot from '@/components/chatbot/Chatbot';
 
 export const metadata: Metadata = {
   title: 'Explorica',
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <Chatbot />
         <Toaster />
       </body>
     </html>

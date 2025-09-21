@@ -15,6 +15,11 @@ import {
   PersonalizedRecommendationsInput,
   PersonalizedRecommendationsOutput,
 } from '@/ai/flows/receive-personalized-recommendations';
+import {
+  chatWithTravelBuddy,
+  ChatWithTravelBuddyInput,
+  ChatWithTravelBuddyOutput,
+} from '@/ai/flows/travel-buddy-flow';
 import { z } from 'zod';
 
 const tripSchema = z.object({
@@ -122,4 +127,14 @@ export async function getPersonalizedRecommendationsAction(input: PersonalizedRe
   } catch (e) {
     return { error: 'Failed to fetch recommendations.' };
   }
+}
+
+export async function sendMessageToTravelBuddyAction(input: ChatWithTravelBuddyInput): Promise<ChatWithTravelBuddyOutput | { error: string }> {
+    try {
+        const response = await chatWithTravelBuddy(input);
+        return response;
+    } catch (e) {
+        console.error(e);
+        return { error: 'Sorry, I had some trouble processing that. Please try again.' };
+    }
 }
