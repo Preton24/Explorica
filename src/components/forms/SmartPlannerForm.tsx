@@ -12,6 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Loader2, Send } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 const initialState: ItineraryState = {
   formState: 'initial',
@@ -92,8 +93,8 @@ export default function SmartPlannerForm() {
             <CardTitle className="font-headline">Your Custom Itinerary</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="prose prose-sm md:prose-base max-w-none prose-p:text-muted-foreground prose-headings:text-foreground">
-                <pre className="whitespace-pre-wrap font-body text-sm bg-muted/50 p-4 rounded-md">{state.data.itinerary}</pre>
+            <div className="prose prose-sm md:prose-base max-w-none dark:prose-invert prose-p:text-muted-foreground prose-headings:text-foreground">
+                <ReactMarkdown>{state.data.itinerary}</ReactMarkdown>
             </div>
           </CardContent>
         </Card>

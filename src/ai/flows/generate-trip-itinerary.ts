@@ -19,7 +19,7 @@ const GenerateTripItineraryInputSchema = z.object({
 export type GenerateTripItineraryInput = z.infer<typeof GenerateTripItineraryInputSchema>;
 
 const GenerateTripItineraryOutputSchema = z.object({
-  itinerary: z.string().describe('A detailed daily itinerary for the trip, including transportation, activities, and accommodations.'),
+  itinerary: z.string().describe('A detailed daily itinerary for the trip in Markdown format, including transportation, activities, and accommodations.'),
 });
 export type GenerateTripItineraryOutput = z.infer<typeof GenerateTripItineraryOutputSchema>;
 
@@ -38,6 +38,8 @@ Budget: {{{budget}}}
 Interests: {{{interests}}}
 
 Please provide a detailed itinerary including specific places, modes of transport, and estimated costs. Make sure to include eco-tourism and cultural spots.
+
+Format the output as a Markdown document. Use headings for each day, bold text for key details like "Morning:", "Lunch:", "Afternoon:", and bullet points for lists of activities or costs.
 `,
 });
 
