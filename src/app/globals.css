@@ -71,6 +71,26 @@ body {
   }
 }
 
+@layer utilities {
+  .animated-gradient {
+    background: linear-gradient(-45deg, #4A00E0, #8E2DE2, #F2A2E0, #F3B396);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
 @layer components {
   .glass-card {
     @apply bg-card/60 backdrop-blur-lg border border-white/20 shadow-lg;

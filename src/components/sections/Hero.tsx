@@ -8,9 +8,9 @@ export default function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-1');
 
   return (
-    <section className="relative h-[80vh] w-full">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/80 via-purple-500/80 to-yellow-500/80"></div>
-      <div className="absolute inset-0 bg-black/30"></div>
+    <section className="relative h-[80vh] w-full overflow-hidden">
+      <div className="animated-gradient absolute inset-0"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
         
         <div className="absolute top-8 right-8">
@@ -20,10 +20,10 @@ export default function Hero() {
             </Button>
         </div>
 
-        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-2xl">
+        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight drop-shadow-md">
           Explore the Heart of India
         </h1>
-        <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/90 drop-shadow-lg">
+        <p className="mt-4 max-w-2xl text-lg md:text-xl text-primary-foreground/90 drop-shadow-md">
           Discover Jharkhand's hidden gems, from breathtaking waterfalls to ancient temples.
           Your unforgettable journey begins here.
         </p>
