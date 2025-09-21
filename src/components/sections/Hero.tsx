@@ -1,19 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { MoveRight, View } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Hero() {
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-1');
 
   return (
     <section className="relative h-[80vh] w-full overflow-hidden">
-       <video
-        src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      />
+      {heroImage && (
+        <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          data-ai-hint={heroImage.imageHint}
+          fill
+          className="object-cover"
+          priority
+        />
+      )}
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
         

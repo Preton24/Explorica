@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-1",
-      "description": "Hero banner for Explorica showing Hundru Falls",
-      "imageUrl": "https://picsum.photos/seed/hundrufalls/1600/900",
-      "imageHint": "waterfall landscape"
+      "description": "Hero banner for Explorica showing a dark forest",
+      "imageUrl": "https://picsum.photos/seed/darkforest/1600/900",
+      "imageHint": "dark forest"
     },
     {
       "id": "dest-netarhat",
