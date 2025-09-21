@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "Hero banner for Jharkhand Journey",
+      "imageUrl": "https://picsum.photos/seed/hero1/1600/900",
+      "imageHint": "landscape nature"
+    },
+    {
+      "id": "dest-netarhat",
+      "description": "Netarhat destination",
+      "imageUrl": "https://picsum.photos/seed/netarhat/600/400",
+      "imageHint": "sunrise hills"
+    },
+    {
+      "id": "dest-patratu",
+      "description": "Patratu Valley",
+      "imageUrl": "https://picsum.photos/seed/patratu/600/400",
+      "imageHint": "winding road"
+    },
+    {
+      "id": "dest-betla",
+      "description": "Betla National Park",
+      "imageUrl": "https://picsum.photos/seed/betla/600/400",
+      "imageHint": "wildlife forest"
+    },
+    {
+      "id": "dest-hundru",
+      "description": "Hundru Falls",
+      "imageUrl": "https://picsum.photos/seed/hundru/600/400",
+      "imageHint": "waterfall rocks"
+    },
+    {
+      "id": "dest-deoghar",
+      "description": "Deoghar Temple",
+      "imageUrl": "https://picsum.photos/seed/deoghar/600/400",
+      "imageHint": "temple architecture"
+    },
+    {
+      "id": "avatar-1",
+      "description": "User avatar 1",
+      "imageUrl": "https://picsum.photos/seed/avatar1/100/100",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "avatar-2",
+      "description": "User avatar 2",
+      "imageUrl": "https://picsum.photos/seed/avatar2/100/100",
+      "imageHint": "person travel"
+    },
+    {
+      "id": "avatar-3",
+      "description": "User avatar 3",
+      "imageUrl": "https://picsum.photos/seed/avatar3/100/100",
+      "imageHint": "person adventure"
+    },
+    {
+      "id": "map-placeholder",
+      "description": "Placeholder for interactive map",
+      "imageUrl": "https://picsum.photos/seed/map/1200/800",
+      "imageHint": "map jharkhand"
+    },
+    {
+      "id": "ticket-qr",
+      "description": "Placeholder QR code for tickets",
+      "imageUrl": "https://picsum.photos/seed/qrcode/150/150",
+      "imageHint": "qr code"
+    }
+  ]
 }
