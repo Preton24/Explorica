@@ -1,5 +1,6 @@
 
 'use client';
+import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
@@ -64,7 +65,11 @@ function PersonalExposureScore() {
   );
 }
 
+type MapType = 'aqi' | 'weather' | 'safety';
+
 export default function HeatMapsPage() {
+  const [mapType, setMapType] = useState<MapType>('aqi');
+
   return (
     <div className="container py-12">
       <div className="text-center mb-12">
@@ -79,22 +84,14 @@ export default function HeatMapsPage() {
         <div className="lg:col-span-2">
           <Card className="glass-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
             <CardContent className="p-4">
-              <Tabs defaultValue="aqi" className="w-full">
+              <Tabs defaultValue="aqi" onValueChange={(value) => setMapType(value as MapType)} className="w-full">
                 <TabsList className="grid w-full grid-cols-3">
                   <TabsTrigger value="aqi">AQI</TabsTrigger>
                   <TabsTrigger value="weather">Weather</TabsTrigger>
                   <TabsTrigger value="safety">Safety Index</TabsTrigger>
                 </TabsList>
-                <TabsContent value="aqi">
-                  <HeatMap key="aqi" mapType="aqi" />
-                </TabsContent>
-                 <TabsContent value="weather">
-                  <HeatMap key="weather" mapType="weather" />
-                </TabsContent>
-                 <TabsContent value="safety">
-                  <HeatMap key="safety" mapType="safety" />
-                </TabsContent>
               </Tabs>
+              <HeatMap mapType={mapType} />
             </CardContent>
           </Card>
         </div>
