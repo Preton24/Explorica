@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Jharkhand Journey',
+  title: 'Explorica',
   description: 'A modern, responsive web application for eco and cultural tourism in Jharkhand.',
 };
 

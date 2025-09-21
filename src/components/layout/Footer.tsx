@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-4 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Jharkhand Journey. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Explorica. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

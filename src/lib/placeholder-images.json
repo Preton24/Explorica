@@ -1,8 +1,9 @@
+
 {
   "placeholderImages": [
     {
       "id": "hero-1",
-      "description": "Hero banner for Jharkhand Journey",
+      "description": "Hero banner for Explorica",
       "imageUrl": "https://picsum.photos/seed/hero1/1600/900",
       "imageHint": "landscape nature"
     },
