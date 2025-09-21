@@ -7,6 +7,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { destinations } from '@/lib/constants';
@@ -14,8 +15,22 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Star, MapPin, View } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import Testimonials from '@/components/sections/Testimonials';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+
 
 type Category = 'All' | 'Eco-tourism' | 'Cultural' | 'Adventure' | 'Spiritual';
+
+const guides = [
+  { name: 'Sanjay Oraon', avatarId: 'guide-1', expertise: 'Wildlife & Birding' },
+  { name: 'Anita Kumari', avatarId: 'guide-2', expertise: 'Cultural & History' },
+];
+
+const handicrafts = [
+  { name: 'Dokra Art Figurine', imageId: 'handicraft-1', price: '₹1500' },
+  { name: 'Sohrai Painting', imageId: 'handicraft-2', price: '₹2500' },
+  { name: 'Bamboo Basket', imageId: 'handicraft-3', price: '₹800' },
+];
 
 export default function DestinationsPage() {
   const [activeFilter, setActiveFilter] = useState<Category>('All');
@@ -106,6 +121,81 @@ export default function DestinationsPage() {
             </Card>
           );
         })}
+      </div>
+
+      {/* Community Sections */}
+      <div className="mt-24 space-y-24">
+        {/* Meet Local Guides */}
+        <section>
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-4xl font-bold">Meet Our Local Guides</h2>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+              Connect with local experts who will make your journey unforgettable.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {guides.map(guide => {
+              const guideAvatar = PlaceHolderImages.find(img => img.id === guide.avatarId);
+              return (
+                <Card key={guide.name} className="flex flex-col items-center p-6 text-center transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
+                  <Avatar className="w-24 h-24 mb-4">
+                    {guideAvatar && <AvatarImage src={guideAvatar.imageUrl} alt={guide.name} data-ai-hint={guideAvatar.imageHint} />}
+                    <AvatarFallback>{guide.name[0]}</AvatarFallback>
+                  </Avatar>
+                  <CardTitle className="font-headline text-xl">{guide.name}</CardTitle>
+                  <CardDescription className="mb-4">{guide.expertise}</CardDescription>
+                  <Button variant="outline">Learn More</Button>
+                </Card>
+              )
+            })}
+             <Card className="flex flex-col items-center p-6 text-center border-dashed border-2 justify-center">
+                <CardTitle className="font-headline text-xl">You're a Local Expert?</CardTitle>
+                <CardDescription className="mb-4">Join our community of guides and share your passion.</CardDescription>
+                <Button>Become a Guide</Button>
+              </Card>
+          </div>
+        </section>
+
+        {/* Shop Local Handicrafts */}
+        <section>
+            <div className="text-center mb-12">
+              <h2 className="font-headline text-4xl font-bold">Shop Authentic Handicrafts</h2>
+              <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">
+                Take a piece of Jharkhand home with you. Support local artisans.
+              </p>
+            </div>
+           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {handicrafts.map(item => {
+              const itemImage = PlaceHolderImages.find(img => img.id === item.imageId);
+              return (
+              <Card key={item.name} className="overflow-hidden group transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
+                <CardHeader className="p-0 relative h-48">
+                  {itemImage && (
+                    <Image
+                      src={itemImage.imageUrl}
+                      alt={item.name}
+                      data-ai-hint={itemImage.imageHint}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  )}
+                </CardHeader>
+                <CardContent className="p-4">
+                   <CardTitle className="font-headline text-lg mb-2">{item.name}</CardTitle>
+                   <CardDescription>Authentic, handmade by local artisans.</CardDescription>
+                </CardContent>
+                <CardFooter className="flex justify-between items-center">
+                  <p className="font-bold">{item.price}</p>
+                  <Button variant="secondary">View Product</Button>
+                </CardFooter>
+              </Card>
+              )
+            })}
+          </div>
+        </section>
+        
+        {/* Testimonials */}
+        <Testimonials />
       </div>
     </div>
   );
