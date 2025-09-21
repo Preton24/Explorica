@@ -17,8 +17,8 @@ import {
 } from '@/ai/flows/receive-personalized-recommendations';
 import {
   chatWithTravelBuddy,
-  ChatWithTravelBuddyInput,
-  ChatWithTravelBuddyOutput,
+  type ChatWithTravelBuddyInput,
+  type ChatWithTravelBuddyOutput,
 } from '@/ai/flows/travel-buddy-flow';
 import { z } from 'zod';
 
