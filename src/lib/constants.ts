@@ -73,7 +73,7 @@ export const destinations: Destination[] = [
     name: 'Ranchi',
     slug: 'ranchi',
     description: 'The capital city, offering a blend of urban culture and natural rock formations.',
-    image: 'dest-hundru',
+    image: 'dest-ranchi',
     rating: 4.4,
     category: 'Cultural',
   },

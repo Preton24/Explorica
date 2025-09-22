@@ -8,6 +8,12 @@
       "imageHint": "waterfall"
     },
     {
+      "id": "dest-ranchi",
+      "description": "Ranchi City",
+      "imageUrl": "https://images.pexels.com/photos/4441983/pexels-photo-4441983.jpeg",
+      "imageHint": "city skyline"
+    },
+    {
       "id": "dest-netarhat",
       "description": "Netarhat destination",
       "imageUrl": "https://tripxl.com/blog/wp-content/uploads/2024/09/Netarhat-sunrise-point.jpg",
@@ -28,13 +34,13 @@
     {
       "id": "dest-hundru",
       "description": "Hundru Falls",
-      "imageUrl": "https://picsum.photos/seed/hundru/600/400",
+      "imageUrl": "https://captureatrip-cms-storage.s3.ap-south-1.amazonaws.com/Rejuvenating_Bath_at_the_Natural_Pool_in_Hundru_Waterfall_1985307590.webp",
       "imageHint": "waterfall rocks"
     },
     {
       "id": "dest-deoghar",
       "description": "Deoghar Temple",
-      "imageUrl": "https://picsum.photos/seed/deoghar/600/400",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Baba_Baidyanath_Jyotirlinga_Temple.jpg",
       "imageHint": "temple architecture"
     },
     {
