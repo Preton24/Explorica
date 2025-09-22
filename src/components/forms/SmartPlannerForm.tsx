@@ -61,7 +61,7 @@ export default function SmartPlannerForm() {
                 <Input
                   id="budget"
                   name="budget"
-                  placeholder="e.g., ₹10000"
+                  placeholder="e.g., RS10000"
                   required
                 />
               </div>

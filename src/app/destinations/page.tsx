@@ -27,9 +27,9 @@ const guides = [
 ];
 
 const handicrafts = [
-  { name: 'Dokra Art Figurine', imageId: 'handicraft-1', price: '₹1500' },
-  { name: 'Sohrai Painting', imageId: 'handicraft-2', price: '₹2500' },
-  { name: 'Bamboo Basket', imageId: 'handicraft-3', price: '₹800' },
+  { name: 'Dokra Art Figurine', imageId: 'handicraft-1', price: 'Rs.1500' },
+  { name: 'Sohrai Painting', imageId: 'handicraft-2', price: 'Rs.2500' },
+  { name: 'Bamboo Basket', imageId: 'handicraft-3', price: 'Rs.800' },
 ];
 
 export default function DestinationsPage() {

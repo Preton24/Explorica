@@ -19,9 +19,9 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
   const destImage = PlaceHolderImages.find(img => img.id === destination.image);
 
   const activities = [
-    { title: 'Guided Waterfall Hike', icon: Camera, price: '₹2,000 onwards' },
-    { title: 'Jungle Safari', icon: Zap, price: '₹4,000 onwards' },
-    { title: 'Local Village Tour', icon: Bike, price: '₹1,200 onwards' },
+    { title: 'Guided Waterfall Hike', icon: Camera, price: 'Rs.2,000 onwards' },
+    { title: 'Jungle Safari', icon: Zap, price: 'Rs.4,000 onwards' },
+    { title: 'Local Village Tour', icon: Bike, price: 'Rs.1,200 onwards' },
   ];
 
   const guides = [
@@ -30,9 +30,9 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
   ];
 
   const handicrafts = [
-    { name: 'Dokra Art Figurine', imageId: 'handicraft-1', price: '₹1500' },
-    { name: 'Sohrai Painting', imageId: 'handicraft-2', price: '₹2500' },
-    { name: 'Bamboo Basket', imageId: 'handicraft-3', price: '₹800' },
+    { name: 'Dokra Art Figurine', imageId: 'handicraft-1', price: 'Rs.1500' },
+    { name: 'Sohrai Painting', imageId: 'handicraft-2', price: 'Rs.2500' },
+    { name: 'Bamboo Basket', imageId: 'handicraft-3', price: 'Rs.800' },
   ];
 
   const reviews = [
