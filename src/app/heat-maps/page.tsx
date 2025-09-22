@@ -1,3 +1,4 @@
+// src/app/heat-maps/page.tsx
 'use client';
 import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -5,9 +6,9 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { AreaChart, ShieldCheck, Thermometer, Wind, Loader2, Landmark } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
+// Removed: import InteractiveMap from '@/components/maps/InteractiveMap'; // No longer needed
+import JharkhandChoroplethMap from '@/components/maps/JharkhandChoroplethMap'; // Now exclusively use this
+import MapLegend from '@/components/maps/MapLegend';
 
 function PersonalExposureScore() {
   return (
@@ -60,7 +61,6 @@ type MapType = 'aqi' | 'weather' | 'safety';
 
 export default function HeatMapsPage() {
   const [mapType, setMapType] = useState<MapType>('aqi');
-  const mapImage = PlaceHolderImages.find(img => img.id === 'map-placeholder');
 
   return (
     <div className="container py-12">
@@ -83,20 +83,21 @@ export default function HeatMapsPage() {
                   <TabsTrigger value="safety">Safety Index</TabsTrigger>
                 </TabsList>
                  <TabsContent value="aqi" className="mt-4">
-                  {mapImage && <Image src={mapImage.imageUrl} alt="AQI Map" width={1200} height={800} className="rounded-lg aspect-video object-cover" />}
+                  <JharkhandChoroplethMap mapType="aqi" />
                 </TabsContent>
                 <TabsContent value="weather" className="mt-4">
-                  {mapImage && <Image src={mapImage.imageUrl} alt="Weather Map" width={1200} height={800} className="rounded-lg aspect-video object-cover" />}
+                  <JharkhandChoroplethMap mapType="weather" />
                 </TabsContent>
                 <TabsContent value="safety" className="mt-4">
-                 {mapImage && <Image src={mapImage.imageUrl} alt="Safety Map" width={1200} height={800} className="rounded-lg aspect-video object-cover" />}
+                 <JharkhandChoroplethMap mapType="safety" />
                 </TabsContent>
               </Tabs>
             </CardContent>
           </Card>
         </div>
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 flex flex-col gap-8">
           <PersonalExposureScore />
+          <MapLegend mapType={mapType} />
         </div>
       </div>
     </div>
