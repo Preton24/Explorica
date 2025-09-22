@@ -1,3 +1,4 @@
+// src/app/destinations/page.tsx
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -9,7 +10,7 @@ import {
   CardTitle,
   CardFooter,
 } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { destinations } from '@/lib/constants';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Star, MapPin, View } from 'lucide-react';
@@ -17,6 +18,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Testimonials from '@/components/sections/Testimonials';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import MarkerMap from '@/components/maps/MarkerMap'; // Import the new MarkerMap component
 
 
 type Category = 'All' | 'Eco-tourism' | 'Cultural' | 'Adventure' | 'Spiritual';
@@ -32,13 +34,28 @@ const handicrafts = [
   { name: 'Bamboo Basket', imageId: 'handicraft-3', price: 'Rs.800' },
 ];
 
+// Define famous places in Jharkhand with coordinates for markers
+const famousPlacesMarkers = [
+  { lat: 23.344, lng: 85.309, title: 'Ranchi (Capital)' },
+  { lat: 22.79, lng: 86.18, title: 'Jamshedpur (Steel City)' },
+  { lat: 23.67, lng: 85.93, title: 'Bokaro Steel City' },
+  { lat: 23.99, lng: 86.19, title: 'Dhanbad (Coal Capital)' },
+  { lat: 24.00, lng: 85.38, title: 'Hazaribagh National Park' },
+  { lat: 23.23, lng: 85.47, title: 'Patratu Valley' },
+  { lat: 24.18, lng: 87.05, title: 'Deoghar (Baba Baidyanath Dham)' },
+  { lat: 23.43, lng: 84.77, title: 'Netarhat (Queen of Chotanagpur)' },
+  { lat: 22.80, lng: 85.30, title: 'Dassam Falls' },
+  { lat: 22.57, lng: 85.30, title: 'Jonha Falls' },
+  { lat: 24.28, lng: 86.30, title: 'Parasnath Hill' },
+];
+
+
 export default function DestinationsPage() {
   const [activeFilter, setActiveFilter] = useState<Category>('All');
 
   const filters: Category[] = ['All', 'Eco-tourism', 'Cultural', 'Adventure', 'Spiritual'];
-  const mapImage = PlaceHolderImages.find(img => img.id === 'map-placeholder');
 
-  const filteredDestinations = destinations.filter(dest => 
+  const filteredDestinations = destinations.filter(dest =>
     activeFilter === 'All' || dest.category === activeFilter
   );
 
@@ -54,18 +71,9 @@ export default function DestinationsPage() {
       <Card className="mb-12 glass-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20">
         <CardContent className="p-4">
           <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
-            {mapImage && (
-              <Image
-                src={mapImage.imageUrl}
-                alt="Map of Jharkhand"
-                data-ai-hint={mapImage.imageHint}
-                fill
-                className="object-cover"
-              />
-            )}
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <Button size="lg">View Interactive Map</Button>
-            </div>
+            {/* Displaying the MarkerMap directly */}
+            <MarkerMap markers={famousPlacesMarkers} />
+            {/* Removed the overlay div and the "View Interactive Maps" button */}
           </div>
         </CardContent>
       </Card>
@@ -193,7 +201,7 @@ export default function DestinationsPage() {
             })}
           </div>
         </section>
-        
+
         {/* Testimonials */}
         <Testimonials />
       </div>
