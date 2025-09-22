@@ -58,7 +58,7 @@
     {
       "id": "map-placeholder",
       "description": "Placeholder for interactive map",
-      "imageUrl": "https://picsum.photos/seed/map/1200/800",
+      "imageUrl": "https://cdn.sketchbubble.com/pub/media/catalog/product/optimized1/7/2/72dde93ceae3f73e133a62a6a13da81610d3c950633e7532cb12f701866f254c/jharkhand-map-slide2.png",
       "imageHint": "map jharkhand"
     },
     {
@@ -82,19 +82,19 @@
     {
       "id": "handicraft-1",
       "description": "Handicraft product 1",
-      "imageUrl": "https://picsum.photos/seed/handicraft1/400/300",
+      "imageUrl": "https://bombayantiques.com/cdn/shop/files/rn-image_picker_lib_temp_5cdc975f-b3eb-4fd3-aad5-125f32424653.jpg?v=1757023239&width=1206",
       "imageHint": "metal art"
     },
     {
       "id": "handicraft-2",
       "description": "Handicraft product 2",
-      "imageUrl": "https://picsum.photos/seed/handicraft2/400/300",
+      "imageUrl": "https://mediacloud.saffronart.com/mercen/prodreports/2020/11/21/544315f4-b87c-4148-9cf6-820a874e5b5a_2_tbig.jpg",
       "imageHint": "tribal painting"
     },
     {
       "id": "handicraft-3",
       "description": "Handicraft product 3",
-      "imageUrl": "https://picsum.photos/seed/handicraft3/400/300",
+      "imageUrl": "https://www.ompure.co.in/wp-content/uploads/2024/10/bamboo-work.jpg",
       "imageHint": "bamboo craft"
     }
   ]
