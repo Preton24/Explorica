@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Star, MapPin, Tent, Plane, Bus, Train, Camera, Zap, Bike, User, ShoppingBag, MessageSquare } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import Link from 'next/link';
 
 export default function DestinationDetailPage({ params }: { params: { slug: string } }) {
   const destination = destinations.find(d => d.slug === params.slug);
@@ -153,7 +154,9 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
                   </CardContent>
                   <CardFooter className="flex justify-between items-center">
                     <p className="font-bold">{item.price}</p>
-                    <Button variant="secondary">Add to Cart</Button>
+                    <Button asChild variant="secondary">
+                      <Link href="/cart">Add to Cart</Link>
+                    </Button>
                   </CardFooter>
                 </Card>
                 )

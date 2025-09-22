@@ -8,7 +8,8 @@ import {
   Home,
   User,
   Star,
-  MountainSnow
+  MountainSnow,
+  ShoppingCart,
 } from 'lucide-react';
 import type { NavLink, Destination, Testimonial } from './types';
 
@@ -16,6 +17,7 @@ export const navLinks: NavLink[] = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/destinations', label: 'Destinations', icon: Map },
   { href: '/bookings', label: 'Bookings', icon: Plane },
+  { href: '/cart', label: 'Cart', icon: ShoppingCart },
   { href: '/smart-planner', label: 'Smart Planner', icon: Bot },
   { href: '/heat-maps', label: 'Heat Maps', icon: AreaChart },
   { href: '/sustainability-tips', label: 'Sustainability', icon: Leaf },
