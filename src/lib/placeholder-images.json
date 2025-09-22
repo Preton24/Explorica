@@ -10,19 +10,19 @@
     {
       "id": "dest-netarhat",
       "description": "Netarhat destination",
-      "imageUrl": "https://picsum.photos/seed/netarhat/600/400",
+      "imageUrl": "https://tripxl.com/blog/wp-content/uploads/2024/09/Netarhat-sunrise-point.jpg",
       "imageHint": "sunrise hills"
     },
     {
       "id": "dest-patratu",
       "description": "Patratu Valley",
-      "imageUrl": "https://picsum.photos/seed/patratu/600/400",
+      "imageUrl": "https://newspost.blr1.digitaloceanspaces.com/44629/valley.jpg",
       "imageHint": "winding road"
     },
     {
       "id": "dest-betla",
       "description": "Betla National Park",
-      "imageUrl": "https://picsum.photos/seed/betla/600/400",
+      "imageUrl": "https://site.outlookindia.com/traveller/wp-content/uploads/2017/06/jharkhand1_Betla-NP_TI.jpg",
       "imageHint": "wildlife forest"
     },
     {

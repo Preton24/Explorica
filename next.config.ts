@@ -52,6 +52,25 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'tripxl.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'site.outlookindia.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'newspost.blr1.digitaloceanspaces.com',
+        port: '',
+        pathname: '/**',
+      },
+    
     ],
   },
 };
